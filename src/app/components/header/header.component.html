@@ -1,0 +1,14 @@
+<main>
+<header>
+    <h1>PARKING APP</h1>
+    <div class="general">
+ <a href="">Mi cuenta</a>
+<a class="cerrarsesion" [routerLink]="['/login']" >Cerrar sesión</a>
+<a [routerLink]="['/estado-cocheras']" >Estado cocheras</a>
+@if(esAdmin){
+<a class="reportes" [routerLink]="['/reportes']">Reportes</a>
+<a class="precios" [routerLink]="['/precios']" >Precios</a>
+}
+    </div>
+</header>
+</main>

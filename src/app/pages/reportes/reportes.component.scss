@@ -1,0 +1,42 @@
+.tabla {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    border-collapse: collapse;
+}
+
+
+thead {
+    background-color: #444444;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+th {
+    padding: 15px 18px;
+}
+
+tr {
+    text-align: center;
+    border-bottom: 1px;
+    background-color: rgb(15, 15, 48);
+}
+
+td {
+    padding: 25px;
+}
+
+main {
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(https://blog.tps.com.mx/hubfs/Blog%20Marzo%202019/7-TPS-Marzo-Imagenes-Blog-Medidas-de-precaucion-para-el-estacionamiento-solo.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+

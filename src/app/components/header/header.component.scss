@@ -1,0 +1,41 @@
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 4rem;
+    color: gray;
+    border-bottom: 4px solid gray;
+}
+
+a {
+    text-decoration: none; 
+    color: gray; 
+    font-size: 1.1rem; 
+}
+
+a:hover {
+    transform: scale(1.15); 
+    border: none; 
+    color: #ffffff; 
+}
+
+.general {
+   margin-top: -30px; 
+    margin-left: 880px; 
+}
+
+.cerrarsesion {
+    margin-right: 30px; 
+    margin-left: 10px; 
+}
+
+.reportes {
+    margin-left: 10px; 
+}
+
+.precios {
+    margin-left: 10px; 
+    margin-right: 25px; 
+}

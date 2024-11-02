@@ -1,0 +1,57 @@
+<main>
+    <app-header></app-header>
+
+
+   <table class="tabla">
+      <thead>
+          <tr>
+              <th>Nro</th>
+              <th>Placa</th>
+              <th>Ingreso</th>
+              <th>Opciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          @for (fila of filas; track $index) {
+              <tr>
+                <td>{{ fila.descripcion || 'Sin descripción' }}</td>
+                <td>
+                    <ng-container *ngIf="fila.patente; else disponibleText">
+                          <span (click)="cerrarEstacionamiento(fila.patente)">
+                              {{ fila.patente }}
+                          </span>
+                      </ng-container>
+                      <ng-template #disponibleText>
+                          <button
+                              (click)="abrirModalNuevoEstacionamiento(fila.id)"
+                              [disabled]="fila.deshabilitada || fila.activo"
+                              class="botondisponibilidad"
+                              [ngClass]="{ disponible: !fila.deshabilitada && !fila.patente, ocupado: fila.deshabilitada }"
+                          >
+                              Disponible
+                          </button>
+                      </ng-template>
+                  </td>
+                  <td>{{ fila.horaIngreso }}</td>
+                  <td>
+                      <div style="display: flex; gap: 5px;">
+                          <button (click)="borrarFila(fila.id)" class="borrarfila">
+                              <img src="https://e7.pngegg.com/pngimages/390/1020/png-clipart-computer-icons-encapsulated-postscript-garbage-collection-miscellaneous-logo.png"/>
+                          </button>
+                          <button (click)="inhabilitarCochera(fila.id)" class="borrarFila">
+                              <img src="https://e7.pngegg.com/pngimages/394/365/png-clipart-no-symbol-circle-prohibited-passage-miscellaneous-angle-thumbnail.png"/>
+                          </button>
+                          <button (click)="habilitarCochera(fila.id)" class="borrarFila">
+                              <img src="https://e7.pngegg.com/pngimages/723/833/png-clipart-green-thumbs-up-illustration-thumb-signal-green-thumbs-up-down-hand-logo-thumbnail.png"/>
+                          </button>
+                      </div>
+                  </td>
+              </tr>
+          }
+      </tbody>
+  </table>
+
+  <div>
+    <button (click)="agregarFila()" class="agregarFila" >Agregar fila</button>
+  </div>
+</main>
